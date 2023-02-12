@@ -20,18 +20,20 @@
 
 <!-- search section -->
 <center>
-  <div class="row py-5" style="justify-content: center; align-items: center;margin:0">
-      <div class="col-lg-6 col-md-8">
-        <h1 class="display-1 heading">IOT<span style=" color:#5464EA;padding-left: 10px;">-</span><span style=" color:#EB0D4A;padding-left: 10px;">WMS</span></h1>
-      </div>
-  </div>
-  <form action="/map" method="POST">
+
+<div class="row py-5" style="justify-content: center; align-items: center;margin:0">
+    <div class="col-lg-6 col-md-8">
+    <h1 class="display-1 heading">IOT<span style=" color:#5464EA;padding-left: 10px;">-</span><span style=" color:#EB0D4A;padding-left: 10px;">WMS</span></h1>
+    </div>
+</div>
+
+<form action="/map" method="POST">
     <% if(error) {%>
       <div class="alert alert-danger" role="alert">
           <%= error %>
       </div>
-      <% } %>
-  <div class="container search_box">
+    <% } %>
+    <div class="container search_box">
       <input name="loc" placeholder="Search Specialists here" list="spec" class = "search spec" type="text" required>
       <datalist id="spec">
         <option value="Khadakwasla">
@@ -44,7 +46,8 @@
       </datalist>
       <button type="submit" class="icon_box" ><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
- </div>
+</form>
+
 </center>
 
 <br><br><br>
