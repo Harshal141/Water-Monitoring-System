@@ -1,0 +1,101 @@
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+    background: #f1f7fd;
+    padding: 70px 0 60px;
+}
+.counts .count-box {
+    padding: 30px 30px 25px 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: #fff;
+}
+.icon_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.counts .count-box i {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    background: #5464EA;
+    color: #fff;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+}
+.counts .count-box span {
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+    color: #183153;
+}
+.counts .count-box p {
+    padding: 0;
+    margin: 0;
+    font-family: roboto;
+    font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Search
+--------------------------------------------------------------*/
+
+.heading{
+    font-family: roboto;
+    font-weight: 600;
+    color: #183153;
+}
+.search_box{
+    display:flex; 
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+}
+.search{
+    height: 60px;
+    width: 60%;
+    border: 1px solid #eee;
+    padding: 0;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 12px;
+    margin-right: 50px;
+}
+.icon_box{
+    width: 60px;
+    height: 60px;
+    background:#5464EA;
+    border-radius: 50px;
+}
+.icon_box i {
+    /* transform: translateX(-50%); */
+    font-size: 20px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}
+ 
+@media (max-width: 600px) {
+.search_box{
+    margin-top: -10px;
+    display: block;
+}
+.search{
+    width: 80%;
+    margin: 0px 0 17px 0;
+}
+}
