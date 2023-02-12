@@ -1,5 +1,10 @@
 const express = require('express');
+const connectDB = require('./config/db');
 const app = express();
+
+// connect database and view engine
+connectDB();
+app.set('view-engine', 'ejs');
 
 // middle ware for post body
 // helps us to get data from req.body
@@ -7,7 +12,7 @@ app.use(express.json({}));
 app.use(express.urlencoded({ extended: false }));
 app.use('/public', express.static('public'));
 
-app.get('/', auth, (req, res) => res.render('index.ejs',{error: ''}));
+app.get('/', (req, res) => res.render('index.ejs'));
 
 // Routes
 app.use('/',require('./routes/login'));
