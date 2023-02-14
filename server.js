@@ -12,7 +12,14 @@ app.use(express.json({}));
 app.use(express.urlencoded({ extended: false }));
 app.use('/public', express.static('public'));
 
-app.get('/home/:name', (req, res) => {
+// authentication middleware
+const auth = require('../middleware/auth');
+const notauth = require('../middleware/notauth');
+
+// @route  GET home/:name
+// @desc   home page render
+// @access private
+app.get('/home/:name',auth, (req, res) => {
     let name = req.params.name;
     res.render('index.ejs',{error:'',name});
 })

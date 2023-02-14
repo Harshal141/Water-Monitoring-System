@@ -9,19 +9,20 @@ const config = require('config');
 
 // importing models and middleware
 const User = require('../models/User');
-
+const auth = require('../middleware/auth');
+const notauth = require('../middleware/notauth');
 
 // @route  GET login
 // @desc   login page render
 // @access public
-router.get('/login', (req, res) => {
+router.get('/login',notauth, (req, res) => {
     res.render('login.ejs',{error: ''});
 });
 
 // @route  POST login
 // @desc   login user + jwt token 
 // @access public
-router.post('/login',
+router.post('/login',notauth,
 async (req,res)=>{
     
     const {email, password} = req.body; // destructure

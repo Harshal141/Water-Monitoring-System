@@ -9,18 +9,20 @@ const config = require('config');
 
 // importing models and middleware
 const User = require('../models/User');
+const auth = require('../middleware/auth');
+const notauth = require('../middleware/notauth');
 
 // @route  GET register
 // @desc   show registeration page
 // @access public
-router.get('/register', (req, res) => {
+router.get('/register',notauth, (req, res) => {
     res.render('register.ejs',{error: ''});
 });
 
 // @route  POST register
 // @desc   resister user to database
 // @access public
-router.post('/register', async (req, res) => {
+router.post('/register',notauth, async (req, res) => {
     const {name, email, password,address,phone} = await req.body; // destructure
 
     try {
