@@ -24,7 +24,6 @@
 <div class="row py-5" style="justify-content: center; align-items: center;margin:0">
     <div class="col-lg-6 col-md-8">
     <h1 class="display-1 heading">IOT<span style=" color:#5464EA;padding-left: 10px;">-</span><span style=" color:#EB0D4A;padding-left: 10px;">WMS</span></h1>
-    <p class="lead text-muted">User - <b><%= name %></b></p>
     </div>
 </div>
 
@@ -93,13 +92,6 @@
       </div>
     </div>
   </section><!-- End Counts Section -->
-
-  <div class="data-name" style="display:none" data-test="<%= name %>"></div>
-
-  <script>
-    var name = document.querySelector('.data-name').getAttribute('data-test');
-    localStorage.setItem('name', name);
-  </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

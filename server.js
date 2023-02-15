@@ -19,9 +19,8 @@ const notauth = require('./middleware/notauth');
 // @route  GET home/:name
 // @desc   home page render
 // @access private
-app.get('/home/:name',auth, (req, res) => {
-    let name = req.params.name;
-    res.render('index.ejs',{error:'',name});
+app.get('/',auth, (req, res) => {
+    res.render('index.ejs',{error:''});
 })
 
 // Routes

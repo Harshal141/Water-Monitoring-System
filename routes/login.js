@@ -49,7 +49,7 @@ async (req,res)=>{
             req.header['x-auth-token'] = token;
             // console.log(req.header['x-auth-token']);
             if(err) throw err;
-            res.redirect(`/home/${user.name}`);
+            res.redirect(`/`);
         });
 
     } catch(err){

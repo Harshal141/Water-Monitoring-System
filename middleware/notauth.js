@@ -6,8 +6,7 @@ module.exports = function(req,res,next) {
     const token = req.header['x-auth-token'];
     
     if(token){
-        let name =req.header['name'];
-        return res.redirect(`/home/'`);
+        return res.redirect(`/`);
     }
     next();
 }

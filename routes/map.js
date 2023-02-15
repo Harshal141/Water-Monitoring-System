@@ -7,6 +7,20 @@ const Data = require('../models/Data');
 const auth = require('../middleware/auth');
 const notauth = require('../middleware/notauth');
 
+// @route  GET map
+// @desc   redirect to home
+// @access private
+router.get('/map',auth,(req,res)=>{
+    res.redirect(`/`);
+})
+
+// @route  POST map/place
+// @desc   rendering a specific location
+// @access private
+router.post('/map',auth,async (req,res)=>{
+    res.redirect(`/map/${req.body.loc}`)
+})
+
 // @route  GET map/place
 // @desc   rendering map for current location
 // @access private
