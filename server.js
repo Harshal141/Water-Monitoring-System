@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/public', express.static('public'));
 
 // authentication middleware
-const auth = require('../middleware/auth');
-const notauth = require('../middleware/notauth');
+const auth = require('./middleware/auth');
+const notauth = require('./middleware/notauth');
 
 // @route  GET home/:name
 // @desc   home page render
