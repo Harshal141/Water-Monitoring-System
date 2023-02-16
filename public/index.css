@@ -7,6 +7,47 @@ body{
 }
 
 /*--------------------------------------------------------------
+# map ejs 
+--------------------------------------------------------------*/
+
+.mapCenter{
+  display: flex;
+  flex-direction: row;
+  /* overflow-y: scroll; */
+}
+
+#map {
+  /* position: fixed; */
+  width: 50% !important;
+  height: 100vh !important;
+
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%; */
+}
+.dataCenter{
+  overflow-y: scroll;
+  height: 100vh;
+  /* height: auto; */
+  width: 50%;
+}
+
+@media (max-width: 600px) { 
+  .mapCenter{
+    flex-direction: column;
+  }
+  #map {
+    width: 100% !important;
+    height: 50vh !important;
+  }
+  .dataCenter{
+    height: auto;
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
 .counts {

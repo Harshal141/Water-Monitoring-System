@@ -11,12 +11,8 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
     <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
-    <script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
-    <styl>
-        
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
+
 </head>
 <body>
 
@@ -25,7 +21,16 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         <div id="map"></div>
         <!-- // container for graphs -->
         <div class="dataCenter container p-5">
-            <h1><%=data %></h1>
+            <h1><%= data.name %> </h1>
+            <div id="emailHelp" style="margin-top: 0 !important;" class="form-text mt-3">Click the marker on the map to view info.</div>
+            <h3 class="mt-4">Flow</h3>
+            <canvas id="flow" style="width:100%;max-width:700px"></canvas>
+            <h3 class="mt-4">Ph</h3>
+            <canvas id="ph" style="width:100%;max-width:700px"></canvas>
+            <h3 class="mt-4">Temp</h3>
+            <canvas id="temp" style="width:100%;max-width:700px"></canvas>
+            <h3 class="mt-4">Turbidity</h3>
+            <canvas id="turb" style="width:100%;max-width:700px"></canvas>
         </div>
     </div>
 
@@ -69,6 +74,8 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         });
 
     </script>
+    <!-- // map js files -->
+    <script src="/public/map.js"></script>
 </body>
 
 </html>
