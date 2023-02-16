@@ -61,7 +61,6 @@ router.get('/map/:place',auth,async (req,res)=>{
         name = JSON.stringify(name);
         graph = JSON.stringify(graph);
         marker = JSON.stringify(marker);
-        console.log(marker)
 
         // rendering map.ejs with all the vaues
         res.render('map.ejs',{data,graph,layers,name,marker});
