@@ -12,6 +12,11 @@ const User = require('../models/User');
 const auth = require('../middleware/auth');
 const notauth = require('../middleware/notauth');
 
+// acessing mongodb URI from default.json
+const fs = require('fs');
+var global_data = fs.readFileSync("default.json");
+global_data = JSON.parse(global_data);
+
 // @route  GET login
 // @desc   login page render
 // @access public
@@ -45,7 +50,7 @@ async (req,res)=>{
             }
         }
         // defining the token and sending it back to the client
-        jwt.sign(payload, config.get('jwtSecret'), (err, token)=>{
+        jwt.sign(payload, global_data['jwtSecret'], (err, token)=>{
             req.header['x-auth-token'] = token;
             // console.log(req.header['x-auth-token']);
             if(err) throw err;

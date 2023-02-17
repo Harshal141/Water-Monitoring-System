@@ -1,11 +1,15 @@
 const mongoose = require('mongoose'); 
 const config = require('config');
-const db = config.get('mongoURI');
 mongoose.set('strictQuery', false);
+
+// acessing mongodb URI from default.json
+const fs = require('fs');
+var global_data = fs.readFileSync("default.json");
+global_data = JSON.parse(global_data);
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(db, {
+        await mongoose.connect(global_data["mongoURI"], {
             useNewUrlParser: true,
             // useCreateIndex: true
         });
