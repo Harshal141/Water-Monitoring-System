@@ -9,16 +9,16 @@ let count4 = document.querySelector('.count4')
 
 // geting counters
 for(let i=0;i<200;++i){
-    setTimeout(function(){count1.innerText=i},20+10*i)
+    setTimeout(function(){count1?count1.innerText=i:"NULL"},20+10*i)
 }
 for(let i=0;i<20;++i){
-    setTimeout(function(){count2.innerText=i},20+10*i)
+    setTimeout(function(){count2?count2.innerText=i:"NULL"},20+10*i)
 }
 for(let i=0;i<5;++i){
-    setTimeout(function(){count3.innerText=i},20+10*i)
+    setTimeout(function(){count3?count3.innerText=i:"NULL"},20+10*i)
 }
 for(let i=0;i<60;++i){
-    setTimeout(function(){count4.innerText=i},20+10*i)
+    setTimeout(function(){count4?count4.innerText=i:"NULL"},20+10*i)
 }
 
 //--------------------------------------

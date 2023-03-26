@@ -59,4 +59,12 @@ async (req,res)=>{
 }
 );
 
+// @route  POST logout
+// @desc   Logout user
+// @access private
+router.post('/logout',auth, (req, res) => {
+    req.header['x-auth-token'] = '';
+    res.redirect('/login');
+});
+
 module.exports=router

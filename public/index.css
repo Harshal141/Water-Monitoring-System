@@ -5,6 +5,14 @@ body{
 .authentication{
     max-width:700px;
 }
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
 
 /*--------------------------------------------------------------
 # map ejs 
@@ -19,7 +27,7 @@ body{
 #map {
   /* position: fixed; */
   width: 50% !important;
-  height: 100vh !important;
+  height: calc(100vh - 45px) !important;
 
   /* position: absolute;
   top: 0;

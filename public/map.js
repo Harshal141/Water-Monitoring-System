@@ -69,7 +69,25 @@ const marker = new ol.layer.Vector({
     })
 });
 map.addLayer(marker);
+// console.log(temp)
 }
+
+// const marker = new ol.layer.Vector({
+//     source : new ol.source.Vector({
+//         features : [
+//             new ol.Feature({
+//                 geometry : new ol.geom.Point(ol.proj.fromLonLat(temp))
+//             })
+//         ]
+//     }),
+//     style : new ol.style.Style({
+//         image : new ol.style.Icon({
+//             src : 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png',
+//             anchor : [0.5, 1]
+//         })
+//     })
+// });
+// map.addLayer(marker);
 
 // event log when clicking a marker
 map.on('click', function(evt){
