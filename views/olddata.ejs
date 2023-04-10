@@ -19,10 +19,8 @@
 <body>
 
 
-    <div class="d-flex mapCenter">
+    <div class="d-flex">
         
-        <!-- // main continers for map -->
-        <div id="map">
             <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #f1f7fd;">
             <div class="container-fluid">
@@ -46,11 +44,10 @@
             </div>
             </div>
         </nav>
-        </div>
         <!-- // container for graphs -->
         <div class="dataCenter container p-5">
-            <h1><%= data.name %> </h1>
-            <div id="emailHelp" style="margin-top: 0 !important;" class="form-text mt-3">Click the marker on the map to view info.</div>
+            <h1><%= name %></h1>
+            <div id="emailHelp" style="margin-top: 0 !important;" class="form-text mt-3"><%= type %></div>
             <h3 class="mt-4">Flow</h3>
             <canvas id="flow" style="width:100%;max-width:700px"></canvas>
             <h3 class="mt-4">Ph</h3>
@@ -59,46 +56,11 @@
             <canvas id="temp" style="width:100%;max-width:700px"></canvas>
             <h3 class="mt-4">Turbidity</h3>
             <canvas id="turb" style="width:100%;max-width:700px"></canvas>
-            <!-- // monthly data form button -->
-            <div class="oldDataForm mt-3">
-                <form action="/map/monthly" method="post">
-                    <input type="hidden" name="name" value="<%= data.name %>">
-                    <button type="submit" class="btn btn-primary">Monthly Data</button>
-                </form>
-                <!-- // yearly data form button -->
-                <form action="/map/yearly" method="post">
-                    <input type="hidden" name="name" value="<%= data.name %>">
-                    <button type="submit" class="btn btn-primary">Yearly Data</button>
-                </form>
-            </div>
-        </div>
+
     </div>
 
-    <!-- containers to hold map js parameters for acessing in javascript files   -->
-    <div class="data" style="display:none" data-test="<%= layers %>"></div>
-    <div class="data-name" style="display:none" data-test="<%= name %>"></div>
-    <div class="data-7" style="display:none" data-test="<%= graph %>"></div>
-    <div class="data-marker" style="display:none" data-test="<%= marker %>"></div>
-    <div class="data-data" style="display:none" data-test="<%= data.marker %>"></div>
-
-    <script>
-
-        // map data
-        let data7 = document.querySelector('.data-7').dataset.test;
-        data7 = JSON.parse(data7);
-        let flow = data7[0];
-        let ph = data7[1];
-        let temp = data7[2];
-        let turb = data7[3];      
-
-        let data = document.querySelector('.data-data').dataset.test;
-        data = JSON.parse(data);
-
-    </script>
-    <!-- // map js files -->
-    <script src="/public/map.js"></script>
     <!-- // graph js files -->
-    <script src="/public/graph.js"></script>
+    <script src="/public/oldgraph.js"></script>
 
 </body>
 

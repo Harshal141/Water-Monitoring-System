@@ -10,21 +10,21 @@ const notauth = require('../middleware/notauth');
 // @route  GET map
 // @desc   redirect to home
 // @access private
-router.get('/map',auth,(req,res)=>{
+router.get('/map',(req,res)=>{
     res.redirect(`/`);
 })
 
 // @route  POST map/place
 // @desc   rendering a specific location
 // @access private
-router.post('/map',auth,async (req,res)=>{
+router.post('/map',async (req,res)=>{
     res.redirect(`/map/${req.body.loc}`)
 })
 
 // @route  GET map/place
 // @desc   rendering map for current location
 // @access private
-router.get('/map/:place',auth,async (req,res)=>{
+router.get('/map/:place',async (req,res)=>{
 
     let loc = req.params.place;
     try{
@@ -87,6 +87,20 @@ router.get('/map/:place',auth,async (req,res)=>{
         console.error(err.message);
         res.status(500).render('index.ejs', {error: 'Server Error'});
     }
+})
+
+// @route  GET map
+// @desc   monthly data
+// @access private
+router.post('/map/monthly',(req,res)=>{ 
+    res.render('olddata.ejs',{name:req.body.name,type:'Monthly Data'},);
+})
+
+// @route  GET map
+// @desc   yearly data
+// @access private
+router.post('/map/yearly',(req,res)=>{
+    res.render('olddata.ejs',{name:req.body.name,type:'Yearly Data'},);
 })
 
 module.exports=router
