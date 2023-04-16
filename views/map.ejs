@@ -61,15 +61,35 @@
             <canvas id="turb" style="width:100%;max-width:700px"></canvas>
             <!-- // monthly data form button -->
             <div class="oldDataForm mt-3">
-                <form action="/map/monthly" method="post">
-                    <input type="hidden" name="name" value="<%= data.name %>">
-                    <button type="submit" class="btn btn-primary">Monthly Data</button>
-                </form>
+                
+                
                 <!-- // yearly data form button -->
-                <form action="/map/yearly" method="post">
-                    <input type="hidden" name="name" value="<%= data.name %>">
-                    <button type="submit" class="btn btn-primary">Yearly Data</button>
-                </form>
+                
+                <!-- // boostrap select statement -->
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Old Data
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                        <form action="/map/weekly" method="post">
+                            <input type="hidden" name="name" value="<%= data.name %>">
+                            <button type="submit" class="btn">Weekly Data</button>
+                        </form>
+                    </li><li>
+                        <form action="/map/monthly" method="post">
+                            <input type="hidden" name="name" value="<%= data.name %>">
+                            <button type="submit" class="btn">Monthly Data</button>
+                        </form>
+                    </li><li>
+                        <form action="/map/yearly" method="post">
+                            <input type="hidden" name="name" value="<%= data.name %>">
+                            <button type="submit" class="btn">Yearly Data</button>
+                        </form>
+                    </li>
+                    </ul>
+                  </div>
             </div>
         </div>
     </div>
@@ -99,7 +119,7 @@
     <script src="/public/map.js"></script>
     <!-- // graph js files -->
     <script src="/public/graph.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -103,4 +103,11 @@ router.post('/map/yearly',(req,res)=>{
     res.render('olddata.ejs',{name:req.body.name,type:'Yearly Data'},);
 })
 
+// @route  GET map
+// @desc   yearly data
+// @access private
+router.post('/map/weekly',(req,res)=>{
+    res.render('olddata.ejs',{name:req.body.name,type:'Weekly Data'},);
+})
+
 module.exports=router

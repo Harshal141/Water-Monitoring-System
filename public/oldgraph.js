@@ -1,10 +1,30 @@
 // map rendering for current location
 // flow ph turbidity temp
 var xValues = ['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7'];
-var flow = [7,7,7,7,7,7,3];
-var ph = [7,7,7,7,7,7,3];
-var turb = [7,7,7,7,7,7,3];
-var temp = [7,7,7,7,7,7,3];
+let olddatatype =  document.querySelector('#emailHelp').innerText;
+console.log(olddatatype)
+
+if(olddatatype == 'Weekly Data'){
+    xValues = ['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7'];
+    var flow = [7,7,7,7,7,7,3];
+    var ph = [7,7,7,7,7,7,3];
+    var turb = [7,7,7,7,7,7,3];
+    var temp = [7,7,7,7,7,7,3];
+}else if(olddatatype == 'Monthly Data'){
+    xValues = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var flow = [7,7,7,7,7,7,3];
+    var ph = [7,7,7,7,7,7,3];
+    var turb = [7,7,7,7,7,7,3];
+    var temp = [7,7,7,7,7,7,3];
+}else if(olddatatype == 'Yearly Data'){
+    xValues = ['2015','2016','2017','2018','2019','2020','2021'];
+    var flow = [7,7,7,7,7,7,3];
+    var ph = [7,7,7,7,7,7,3];
+    var turb = [7,7,7,7,7,7,3];
+    var temp = [7,7,7,7,7,7,3];
+}
+
+
 
         new Chart("flow", {
         type: "line",
