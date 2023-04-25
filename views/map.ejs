@@ -109,7 +109,20 @@
         let flow = data7[0];
         let ph = data7[1];
         let temp = data7[2];
-        let turb = data7[3];      
+        let turb = data7[3];  
+        
+        function getRandomFloat(min, max, decimals) {
+            const str = (Math.random() * (max - min) + min).toFixed(decimals);
+
+            return parseFloat(str);
+        }
+        
+        for(let i=0;i<7;i++){
+            flow[i] = getRandomFloat(0,3,2);
+            ph[i] = getRandomFloat(6.5,8.5,1);
+            temp[i] = getRandomFloat(18,24,2);
+            turb[i] = getRandomFloat(0,0.2,3);
+        }
 
         let data = document.querySelector('.data-data').dataset.test;
         data = JSON.parse(data);
