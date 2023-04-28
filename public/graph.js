@@ -1,6 +1,6 @@
 // map rendering for current location
 // flow ph turbidity temp
-var xValues = ['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7'];
+var xValues = ['28/04/23','27/04/23','26/04/23','25/04/23','24/04/23','23/04/23','22/04/23'];
 
         new Chart("flow", {
         type: "line",
