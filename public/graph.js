@@ -7,6 +7,7 @@ var xValues = ['28/04/23','27/04/23','26/04/23','25/04/23','24/04/23','23/04/23'
         data: {
             labels: xValues,
             datasets: [{
+            label: 'L/minute',
             backgroundColor: "#00AEEF",
             borderColor: "rgba(0,0,0,0.1)",
             data: flow
@@ -19,6 +20,7 @@ var xValues = ['28/04/23','27/04/23','26/04/23','25/04/23','24/04/23','23/04/23'
         data: {
             labels: xValues,
             datasets: [{
+            label: 'pH',
             backgroundColor: "#00AEEF",
             borderColor: "rgba(0,0,0,0.1)",
             data: ph
@@ -31,6 +33,7 @@ var xValues = ['28/04/23','27/04/23','26/04/23','25/04/23','24/04/23','23/04/23'
         data: {
             labels: xValues,
             datasets: [{
+            label: 'Celsius',
             backgroundColor: "#00AEEF",
             borderColor: "rgba(0,0,0,0.1)",
             data: temp
@@ -43,6 +46,7 @@ var xValues = ['28/04/23','27/04/23','26/04/23','25/04/23','24/04/23','23/04/23'
         data: {
             labels: xValues,
             datasets: [{
+            label: 'Nephelometric Turbidity Unit(NTU)',
             backgroundColor: "#00AEEF",
             borderColor: "rgba(0,0,0,0.1)",
             data: turb
