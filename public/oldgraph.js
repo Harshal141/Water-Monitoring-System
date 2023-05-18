@@ -6,8 +6,8 @@ console.log(olddatatype)
 
 if(olddatatype == 'Weekly Data'){
     xValues = ['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7'];
-    var flow = [7,7,7,7,7,7,3];
-    var ph = [7,7,7,7,7,7,3];
+    var flow = [7,6,7,5,7,6,3];
+    var ph = [6,7,5,7,4,7,5];
     var turb = [7,7,7,7,7,7,3];
     var temp = [7,7,7,7,7,7,3];
 }else if(olddatatype == 'Monthly Data'){
